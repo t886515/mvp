@@ -45,10 +45,16 @@ app.post('/add', function(req, res) {
       res.status(500).send(err);
     } else {
       console.log('Saved?');
-      res.status(200).send(student);
+      res.status(201).send(student);
     }
   })
 }); // add items inside of a database
+
+app.post('/removeall', function(req, res) {
+  Student.remove({}).exec((err, success) => {
+    res.status(201).send('successfully removed all');
+  });
+});
 
 
 app.use('/style.css', function(req, res, next) {

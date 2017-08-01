@@ -8,7 +8,8 @@ angular.module('random-select')
   controller: 'RandomPanelCtrl',
   bindings: {
     selected: '<',
-    selectedlist: '<'
+    selectedlist: '<',
+    reset: '<'
   },
   templateUrl: 'templates/randomPanel.html'
 });

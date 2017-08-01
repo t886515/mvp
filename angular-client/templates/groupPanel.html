@@ -1,0 +1,10 @@
+<div>
+  <h3>Groups: </h3>
+  <div ng-if="$ctrl.groupnumarray.length!==0"> 
+  <h4>There are {{ $ctrl.groupnumarray.length }} groups for groupsize of {{ $ctrl.groupobj[1].length }} :</h4>
+  <button ng-click="$ctrl.resetgroup()" class="btn">Clear Group</button>
+    <grouped-student ng-repeat="objindex in $ctrl.groupnumarray" grouparray="$ctrl.groupobj[objindex]" index="objindex">
+    </grouped-student>
+  </div>
+  <div ng-if="$ctrl.groupnumarray.length===0">You have not yet assigned any groups!</div>
+</div> 

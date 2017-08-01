@@ -1,4 +1,6 @@
 <div class="studententry">
-  <p>Name: {{ $ctrl.student.name }} Notes: {{ $ctrl.student.note }}</p>
+  <p class="name">Name: {{ $ctrl.student.name }} </br>
+  <small ng-if="$ctrl.student.note" class="note">Notes: {{ $ctrl.student.note }}</small>
+  </p>
 
 </div>

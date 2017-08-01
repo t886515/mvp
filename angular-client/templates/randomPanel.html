@@ -1,10 +1,11 @@
 <div>
-  <h3>Selected Students</h3>
-  <p>Selected Student: {{ $ctrl.selected.name }} </p>
-  <div> 
-  <h4>Students that has been selected:</h4>
-  <button ng-click="" class="btn">Clear selected list</button>
+  <h3>Randomly Selected Students:</h3>
+  <div ng-if="$ctrl.selectedlist.length!==0"> 
+    <p>Selected Student: {{ $ctrl.selected.name }} </p>
+    <h4>Students that has been selected:</h4>
+    <button ng-click="$ctrl.reset()" class="btn">Clear selected list</button>
     <selected-student ng-repeat="selectedstudent in $ctrl.selectedlist" selectedstudent="selectedstudent">
     </selected-student>
   </div>
-</div>
+  <div ng-if="$ctrl.selectedlist.length===0"> You have not selected any students!</div>
+</div> 

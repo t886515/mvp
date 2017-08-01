@@ -1,5 +1,7 @@
-<div>
-  <h3>All Students</h3>
+<button ng-if="$ctrl.students.length!==0" ng-click="$ctrl.clearDB()" class="btn">Clear database (CAUTION!)</button>
+<h3>All Students</h3>
+<div ng-if="$ctrl.students.length!==0">
+  </br>
   <button ng-click="$ctrl.randomPick()" class="btn">Randomly Pick One</button>
   <form>
     <label>Group Size: </label>
@@ -7,4 +9,8 @@
     <input ng-click="$ctrl.groupThem()" type="submit" value="Randomly Group Them!" />
   </form>
   <student ng-repeat='student in $ctrl.students' student="student"></student>
+</div>
+
+<div ng-if="$ctrl.students.length===0">
+You have not yet add any students!
 </div>

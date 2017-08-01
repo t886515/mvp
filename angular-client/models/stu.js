@@ -38,8 +38,22 @@ angular.module('random-select')
 
   };
 
+  var remove = function(callback) {
+    $http({
+      url: `${HOST_URL}/removeall`,
+      method: 'POST'
+    })
+    .then(function(res) {
+      callback(null, res.data);
+    })
+    .catch(function(err) {
+      callback(err);
+    })
+  }
+
   return {
     add: add,
-    fetch: fetch
+    fetch: fetch,
+    remove: remove
   };
 });
