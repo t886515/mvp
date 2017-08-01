@@ -1,3 +1,10 @@
 <div>
   <h3>Selected Students</h3>
+  <p>Selected Student: {{ $ctrl.selected.name }} </p>
+  <div> 
+  <h4>Students that has been selected:</h4>
+  <button ng-click="" class="btn">Clear selected list</button>
+    <selected-student ng-repeat="selectedstudent in $ctrl.selectedlist" selectedstudent="selectedstudent">
+    </selected-student>
+  </div>
 </div>

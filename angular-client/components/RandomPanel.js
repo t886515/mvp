@@ -1,4 +1,4 @@
-angular.module('random-select', [])
+angular.module('random-select')
 
 .controller('RandomPanelCtrl', function() {
   
@@ -7,7 +7,8 @@ angular.module('random-select', [])
 .component('randomPanel', {
   controller: 'RandomPanelCtrl',
   bindings: {
-
+    selected: '<',
+    selectedlist: '<'
   },
   templateUrl: 'templates/randomPanel.html'
 });

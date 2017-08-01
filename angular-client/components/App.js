@@ -5,16 +5,16 @@ angular.module('random-select', [])
   this.selected = {};
   this.dupAll = [];
   //this.allStudent = [];
-  StuModel.fetch((err, studentData) => {
+  this.setAll = function(err, studentData) {
     this.allStudent = studentData;
     this.dupAll = studentData.slice();
-    console.log(this.dupAll)
-    //console.log(this.allStudent);
-  })
+  }.bind(this);
+
   this.resetSelected = function() {
     this.selectedList = [];
-  }
+  }.bind(this);
 
+  StuModel.fetch(this.setAll);
 })
 
 .component('app', {

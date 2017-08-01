@@ -1,5 +1,10 @@
 <div>
   <h3>All Students</h3>
-  <button ng-click="$ctrl.randomPick()" class="btn">Randomize</button>
+  <button ng-click="$ctrl.randomPick()" class="btn">Randomly Pick One</button>
+  <form>
+    <label>Group Size: </label>
+    <input ng-model="$ctrl.groupsize" type="text" />
+    <input ng-click="$ctrl.groupThem()" type="submit" value="Randomly Group Them!" />
+  </form>
   <student ng-repeat='student in $ctrl.students' student="student"></student>
 </div>

@@ -3,10 +3,7 @@ angular.module('random-select')
   this.updateStudent = function() {
     StuModel.add(this.studentname, this.studentnote, (err, res) => {
       if (res) {
-        StuModel.fetch((err, studentData) => {
-          this.students = studentData;
-          this.dup = studentData.slice();
-        })
+        StuModel.fetch(this.setall);
       }
     });
   }
@@ -16,7 +13,8 @@ angular.module('random-select')
   bindings: {
     students: '=',
     selectedlist: '=',
-    dup: '='
+    dup: '=',
+    setall: '<'
   },
   templateUrl: 'templates/studentForm.html'
 });
