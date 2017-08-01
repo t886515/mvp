@@ -1,11 +1,12 @@
-<h3>Add A Student</h3>
+<div class="addform">
+  <h4>Add A Student</h4>
+  <form>
+    <label>Student Name: </label>
+    <input ng-model="$ctrl.studentname" type="text" />
 
-<form>
-  <label>Student Name: </label>
-  <input ng-model="$ctrl.studentname" type="text" />
+    <label>Notes: </label>
+    <input ng-model="$ctrl.studentnote" type="type" />
 
-  <label>Notes: </label>
-  <input ng-model="$ctrl.studentnote" type="type" />
-
-  <input ng-click="$ctrl.updateStudent()" type="submit" value="Add Student" />
-</form>
+    <input ng-click="$ctrl.updateStudent()" type="submit" value="Add Student" />
+  </form>
+</div>

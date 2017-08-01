@@ -1,5 +1,61 @@
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
 body {
   margin: 0;
+  text-align: center;
   margin-top: 10px;
-  font-family: arial, sans-serif;
+  font-family: "Arial Black", Gadget, sans-serif;
+  display: table-cell;
+  vertical-align: middle;
+  background-color: #E0FFFF;
 }
+
+.group {
+  float: right;
+  border: 10px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: #FFF5EE;
+}
+
+.random {
+  float: right;
+  border: 10px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: #FFF5EE;
+}
+/*
+.addform {
+  position:absolute;
+  top:0;
+  right:0;
+}*/
+
+.all {
+  float: left;
+  border: 10px solid black;
+  border-radius: 10px;
+  margin: 10px 10px 10px 10px;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-color: #FFF5EE;
+}
+
+/*.selectedstudententry {
+  border-style: solid;
+  border-top: #ff0000;
+}*/
+
+/*button {
+  font-size: 15px;
+}
+*/

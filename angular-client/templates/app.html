@@ -1,7 +1,23 @@
 <div>
-  <h1>Random Select :)</h1>
+<div ng-if="$ctrl.user">
+  <h1>Random Select 隨機選擇系統</h1>
   <student-form students="$ctrl.allStudent" reset-selected="$ctrl.resetSelected" dup="$ctrl.dupAll" setall="$ctrl.setAll"></student-form>
   <all-student students="$ctrl.allStudent" selected="$ctrl.selected" selected-list="$ctrl.selectedList" dup="$ctrl.dupAll" setgroup="$ctrl.setGroup" setall="$ctrl.setAll"></all-student>
   <random-panel selected="$ctrl.selected" selectedlist="$ctrl.selectedList" reset="$ctrl.resetSelected"></random-panel>
   <group-panel groupobj="$ctrl.groupObject" groupnumarray="$ctrl.groupNumArray" resetgroup="$ctrl.resetGroup"></group-panel>
-<div>
+</div>
+
+<div ng-if="!$ctrl.user">
+  <h2> Please log in! </h2>
+  <form>
+    <label>Username: </label>
+    <input ng-model="$ctrl.username" type="text" />
+
+    <label>Password: </label>
+    <input ng-model="$ctrl.password" type="password" />
+
+    <input ng-click="$ctrl.logOn()" type="submit" value="Log On" />
+    <input ng-click="$ctrl.signUp()" type="submit" value="Sign Up" />
+  </form>
+
+</div>

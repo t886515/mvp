@@ -5,7 +5,7 @@ var path = require('path');
 var bodyParser = require('body-parser');
 
 var Student = require('./app/models/student.js');
-// var User = require('/app/models/user');
+var User = require('./app/models/user.js');
 
 var mongoose = require('mongoose');
 
@@ -26,6 +26,34 @@ app.use(function(req, res, next) {
   next();
 });
 
+
+app.post('/logon', function(req, res) {
+  var username = req.body.username;
+  var password = req.body.password;
+  User.findOne({ username: username, password: password }).exec((err, user) => {
+    if (user) {
+      res.status(200).send(user);
+    } else {
+      res.status(500).send(err);  
+    }
+  })
+}); //get all data in array form from database
+app.post('/signup', function(req, res) {
+  var username = req.body.username;
+  var password = req.body.password;
+  var newUser = new User({
+    username: username,
+    password: password
+  });
+  newUser.save((err, user) => {
+    if (err) {
+      console.log('the error is: ', err);
+      res.status(500).send(err);
+    } else {
+      res.status(201).send(user);
+    }
+  })
+});
 
 app.get('/fetch', function(req, res) {
   Student.find().exec((err, allStudents) => {
