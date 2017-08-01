@@ -1,4 +1,6 @@
 <div>
-  <h1>Teacher Helper :)</h1>
-  <!-- <all-student></all-student> -->
+  <h1>Random Select :)</h1>
+  <student-form students="$ctrl.allStudent" reset-selected="$ctrl.resetSelected" dup="$ctrl.dupAll"></student-form>
+  <all-student students="$ctrl.allStudent" selected="$ctrl.selected" selected-list="$ctrl.selectedList" dup="$ctrl.dupAll"></all-student>
+  <random-panel selected="$ctrl.selected" selectedlist="$ctrl.selectedList"></random-panel>
 <div>
