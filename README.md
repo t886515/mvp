@@ -1,7 +1,7 @@
 ## Development/Build Setup
-
-## install dependencies
+------------------------------------------------------------------------------------------------------------------------------
+### install dependencies
 npm install
 
-## start server on localhost:5000
+### start server on localhost:5000
 npm start
