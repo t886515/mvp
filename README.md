@@ -1,2 +1,7 @@
-#mvp
-This is a project I completed as a student at [hackreactor](http://hackreactor.com). This project was worked on with a pair.
+## Development/Build Setup
+
+# install dependencies
+npm install
+
+# start server on localhost:5000
+npm start
